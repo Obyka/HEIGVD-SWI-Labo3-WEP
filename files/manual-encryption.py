@@ -11,6 +11,12 @@ import binascii
 import zlib
 from rc4 import RC4
 from struct import *
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("interface", help="Interface monitoring")
+args = parser.parse_args()
 
 key= b'\xaa\xaa\xaa\xaa\xaa'
 
@@ -37,4 +43,6 @@ model.icv = unpack('!L', ciphertext[-4:])[0]
 
 # enregistre la trame dans un fichier cap
 wrpcap("wep.cap",model)
+
+sendp(model, iface=args.interface, loop=1, inter=0.2)
 
