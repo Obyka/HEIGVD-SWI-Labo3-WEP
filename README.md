@@ -96,6 +96,10 @@ Vous devrez donc créer votre message, calculer le contrôle d’intégrité (IC
 - Vous pouvez vous guider à partir du script fourni pour les différentes conversions de formats qui pourraient être nécessaires.
 - Vous pouvez exporter votre nouvelle trame en format pcap utilisant Scapy et ensuite, l’importer dans Wireshark. Si Wireshark est capable de déchiffrer votre trame forgée, elle est correcte !
 
+Voici la trame déchiffrée par Wireshark.
+![image](https://user-images.githubusercontent.com/28777250/77431646-44576680-6ddd-11ea-8897-0e7ef1b97958.png)
+
+
 
 ### 3. Fragmentation
 
