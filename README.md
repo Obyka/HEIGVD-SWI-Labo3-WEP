@@ -105,6 +105,9 @@ Voici la trame déchiffrée par Wireshark.
 
 Dans cette partie, vous allez enrichir votre script développé dans la partie précédente pour chiffrer 3 fragments.
 
+Voici le résultat sur wireshark du chiffrement de 3 fragments :
+![image](images/step3_wireshark.png)
+
 ### Quelques éléments à considérer :
 
 - Chaque fragment est numéroté. La première trame d’une suite de fragments a toujours le numéro de fragment à 0. Une trame entière (sans fragmentation) comporte aussi le numéro de fragment égal à 0
