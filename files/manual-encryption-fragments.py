@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-""" Manually encrypt a wep message given the WEP key"""
+""" Manually encrypt a wep message fragmented in 3 part given the WEP key"""
 
 __author__      = "Florian Polier & Eric Tran"
 
@@ -54,6 +54,7 @@ cleartext = []
 for i in range(nbFrag):
     cleartext.append((chr(ord("A") + i) * 36).encode('ascii'))
 
+# Chiffrement et modifications des champs nécessaire pour la fragmentation.
 for i in range(len(cleartext)):
     wepdata, icv = encryptData(cleartext[i], seed)
     models[i].wepdata = wepdata
@@ -69,4 +70,3 @@ for i in range(len(cleartext)):
 wrpcap("wep_frag.cap",models)
 
 sendp(models, iface=args.interface, loop=1, inter=0.2)
-

@@ -105,7 +105,7 @@ Voici la trame déchiffrée par Wireshark.
 
 Dans cette partie, vous allez enrichir votre script développé dans la partie précédente pour chiffrer 3 fragments.
 
-Voici le résultat sur wireshark du chiffrement de 3 fragments :
+Voici le résultat sur wireshark du chiffrement de 3 fragments (script manual-encryption-fragments.py) :
 ![image](images/step3_wireshark.png)
 
 ### Quelques éléments à considérer :
